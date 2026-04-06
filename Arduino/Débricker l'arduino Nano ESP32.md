@@ -70,27 +70,27 @@ Ouvrir le Sketch **Basics > Blink**
 
 Celui-ci va nous permettre de récupérer un programme saint ainsi que les programmes de boot et partition.
 
-![open sketch.png](open sketch.png)
+![open_sketch.png](open_sketch.png)
 
 
 
 **Compiler** le **Sketch**
 
-![compil sketch.png](compil sketch.png)
+![compil_sketch.png](compil_sketch.png)
 
 Ouvrir le dossier du **Sketch**
 
-![sketch folder.png](sketch folder.png)
+![sketch_folder.png](sketch_folder.png)
 
 Ouvrir le dossier du **build**
 
-![build sketch.png](build sketch.png)
+![build_sketch.png](build_sketch.png)
 
 Naviguer jusqu'à l'**image binaire** du **Sketch**
 
 Ici nous avons une version compilé du loader, partition et programme créé par le compilateur pour notre board.
 
-![binary sketch.png](binary sketch.png)
+![binary_sketch.png](binary_sketch.png)
 
 Ouvrir le dossier contenant l'image du **Recovery** pour votre Arduino
 
@@ -102,7 +102,7 @@ Ouvrir le dossier contenant l'image du **Recovery** pour votre Arduino
 
 Copier les fichiers du **programme**, du **bootloader** et des **partitions** dans le dossier contenant l'image du **Recovery** pour votre Arduino.
 
-![final folder.png](final folder.png)
+![final_folder.png](final_folder.png)
 
 Vérifier l'adresse du programme dans le fichier **Readme (ici: 0xF70000)**
 
@@ -117,7 +117,7 @@ Placer l'Arduino en **mode "ROM Bootloader"**
 
 On est maintenant prêt à reprogrammer l'Arduino !
 
-![ROM Bootloader.png](ROM Bootloader.png)
+![ROM_Bootloader.png](ROM_Bootloader.png)
 
 Ouvrir la console **Python** (ici **Anaconda Prompt**) dans le dossier du **recovery**.
 
