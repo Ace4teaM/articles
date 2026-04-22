@@ -8,6 +8,14 @@ Articles sur des sujets divers en lien avec l'informatique.
 
 
 
+Création du fichier `index.html` :
+
+```shell
+npx markmap-cli README.md --offline --output index.html
+```
+
+
+
 # Modélisation 3D
 
 ## 3DS Max
