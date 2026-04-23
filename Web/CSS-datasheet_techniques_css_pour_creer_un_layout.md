@@ -1,7 +1,3 @@
-> A ILLUSTRER avec des images et poster dans les articles Github
-
-
-
 # Datasheet – Techniques CSS
 
 Ce document regroupe les **techniques CSS essentielles** utilisées aujourd’hui pour construire des layouts modernes, responsives et maintenables.

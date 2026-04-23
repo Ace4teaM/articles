@@ -22,6 +22,12 @@ npx markmap-cli README.md --offline --output index.html
 
 * [Problème de compilation MAXSDK sous VisualStudio](3DSMax/Probleme_de_compilation_MAXSDK_sous_VisualStudio.md)
 
+# Conception
+
+## Méthodes
+
+* [Langage de Modélisation Unifié (UML)](Conception/UML.md)
+
 # Programmation
 
 ## C/C++
@@ -36,6 +42,17 @@ npx markmap-cli README.md --offline --output index.html
 
 * [Gestionnaire de paquets (NPM / NPX)](Javascript/NPM_NPX.md)
 
+## Python
+
+### Librairies
+
+* [Manipulation de tableaux numériques (Pandas)](Python/Python-Pandas.md)
+
+### Outils
+
+* [Environnement virtuel (Anaconda)](Python/Python-Environnement_virtuel.md)
+* [Environnement virtuel (UV)](Python/Python-UV.md)
+
 # Réseaux
 
 ## Adressage IP
@@ -48,7 +65,8 @@ npx markmap-cli README.md --offline --output index.html
 
 ### Concepts
 
-* [Accessibilité (ARIA)](Web/Aria.md)
+* [Sémantique HTML](Web/HTML-Semantique.md)
+* [Accessibilité (ARIA)](Web/ARIA.md)
 * [Données (DATA)](Web/HTML-Data.md)
 
 * [Grilles CSS (GRID)](Web/FullCSSGrid.md)
@@ -63,14 +81,21 @@ npx markmap-cli README.md --offline --output index.html
 ### Divers
 
 * [Rappels sur le CSS](Web/CSS-Rappels.md)
+* [Datasheet_des techniques_CSS_pour_créer_un_layout.md](Web/CSS-datasheet_techniques_css_pour_creer_un_layout.md)
+* [Le Javascript appliqué au Web](Web/Javascript.md)
 
 ### Hacks
 
 * [Full height en HTML_CSS avec scrolling](Web/Full_height_en_HTML_CSS_avec_scrolling.md)
 
+### Frameworks
+
+* [React avec Next.js](Web/React_Next.md)
+
 ## HTTP
 
 * [Application Programming Interface (API)](Web/API.md)
+* [En-Têtes (Header)](Web/HTTP-Header.md)
 
 # Systèmes
 
@@ -100,8 +125,22 @@ npx markmap-cli README.md --offline --output index.html
 
 ### Relais
 
+## Arduino
+
+* [Débricker l'arduino Nano ESP32](Arduino/Debricker_arduino_Nano_ESP32.md)
+
 # Automatisme
 
 ## Concepts
 
 * Grafcet
+
+# Intelligence Artificielle
+
+## Protocoles
+
+* [Model Context Protocol (MCP)](IA/IA-MCP.md)
+
+## Modèles
+
+* [Mistral](IA/IA-Mistral.md)

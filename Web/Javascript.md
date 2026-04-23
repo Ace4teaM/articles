@@ -446,3 +446,30 @@ Comparatif rapide
 | `filter` | *Lesquels ?*    | `array`   |
 
 ------
+
+# YARN
+
+**Yarn** est un **gestionnaire de paquets pour JavaScript**, principalement utilisé avec **Node.js** pour gérer les dépendances d’un projet (bibliothèques, frameworks, outils). C’est une alternative à **npm**.
+
+Yarn permet de :
+
+- installer des dépendances (`react`, `lodash`, etc.)
+- verrouiller les versions exactes utilisées
+- accélérer les installations
+- garantir des builds reproductibles
+- gérer les scripts de projet
+
+```shell
+yarn init          # créer un projet
+yarn add react     # installer une dépendance
+yarn remove react  # supprimer une dépendance
+yarn install       # installer depuis package.json
+yarn run build     # exécuter un script
+```
+
+Yarn a été créé par Facebook pour améliorer :
+
+- la vitesse d’installation
+- la fiabilité du cache
+- la cohérence des versions (lockfile strict)
+- l’installation parallèle

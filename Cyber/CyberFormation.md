@@ -1409,7 +1409,7 @@ L'Agent remonte les événements des clients au serveur
 
 ![image-20250123172056208](.\image-20250123172056208.png)
 
-**Exemple de réponse à un l'apparition d'un log**
+**Exemple de réponse à l'apparition d'un log**
 
 ![image-20250123173550636](.\image-20250123173550636.png)
 
