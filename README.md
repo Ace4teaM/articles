@@ -59,11 +59,20 @@ npx markmap-cli README.md --offline --output index.html
 
 * [Les plages d'adresses IPv4](Network/Plage_adresses_IPv4.md)
 
+# Standards
+
+## Encodage
+
+* ASCII
+* [Unicode (UTF8, UTF16 et UTF32)](standards/Unicode.md)
+
+* Base64
+
 # Web
 
 ## HTML/CSS
 
-### Concepts
+### Standards
 
 * [Sémantique HTML](Web/HTML-Semantique.md)
 * [Accessibilité (ARIA)](Web/ARIA.md)
@@ -90,7 +99,21 @@ npx markmap-cli README.md --offline --output index.html
 
 ### Frameworks
 
-* [React avec Next.js](Web/React_Next.md)
+* React
+* Vue.js
+* [Next.js (React)](Web/React_Next.md)
+* ExpressJS (BackEnd)
+
+### Librairies
+
+#### Validation de champs
+
+* JOI.js
+
+#### ORM: Object Relational Mapping
+
+* Prisma
+* Entity Framework
 
 ## HTTP
 
@@ -113,13 +136,28 @@ npx markmap-cli README.md --offline --output index.html
 * [Gestionnaire de conteneurs (Docker)](Linux/Docker.md)
 * [Arborescence des dossiers](Linux/Arborescence.md)
 
+## Android
+
+## iOS
+
+## MacOS
+
+# Multi-Plateforme
+
+## Framework
+
+* React Native (Javascript pour Android, iOS)
+* Flutter (Dart pour Android, iOS, Windows, Linux, MacOS)
+* .Net MAUI (CLR pour Windows, Android, iOS, MacOS)
+* Qt (C++ pour Windows, Linux, MacOS, Android, iOS, ...)
+
 # Electronique
 
 ## Electricité
 
-### Courant Alternatif
+### Connaissances
 
-### Courant Continue
+* Courant Alternatif et courant Continu
 
 ## Montage
 
@@ -141,6 +179,26 @@ npx markmap-cli README.md --offline --output index.html
 
 * [Model Context Protocol (MCP)](IA/IA-MCP.md)
 
-## Modèles
+## LLM ou Large Langage Model
+
+### Modèles
 
 * [Mistral](IA/IA-Mistral.md)
+
+### Outils
+
+* Huggingface
+
+## Machine Learning
+
+### Modèles par régression
+
+### Modèles par arbre
+
+### Modèle par réseaux neurones et Deep Learning
+
+# Mathématiques
+
+## Statistiques
+
+* Régression linéaire

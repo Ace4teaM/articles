@@ -41,6 +41,48 @@ l'attribut **role** permet de donner une fonction à une balise
 </div>
 ```
 
+**Les rôles de Structure (Landmarks)**
+
+Ces rôles permettent aux utilisateurs de lecteurs d'écran de "sauter" directement à une section de la page.
+
+- **`navigation`** : Pour les menus de navigation (équivalent HTML5 : `<nav>`).
+- **`main`** : Le contenu principal de la page (équivalent : `<main>`).
+- **`banner`** : L'en-tête de la page (équivalent : `<header>`).
+- **`contentinfo`** : Le pied de page (équivalent : `<footer>`).
+- **`search`** : Pour le formulaire de recherche.
+
+**Les rôles de Widgets (Interactifs)**
+
+Ils indiquent comment l'utilisateur doit interagir avec l'élément.
+
+- **`button`** : Pour un élément cliquable.
+- **`link`** : Pour un lien vers une autre ressource.
+- **`dialog`** : Pour une fenêtre modale.
+- **`tablist`**, **`tab`**, **`tabpanel`** : Pour créer des systèmes d'onglets.
+- **`menu`**, **`menuitem`** : Pour les menus déroulants complexes.
+
+**Les rôles de Document**
+
+Ils décrivent l'organisation du contenu textuel.
+
+- **`article`** : Une section de contenu autonome (ex: un post de blog).
+- **`heading`** : Un titre (nécessite souvent `aria-level="1"` pour indiquer le niveau).
+- **`img`** : Pour indiquer qu'un élément (ou un groupe d'icônes SVG) doit être traité comme une image.
+- **`list`** et **`listitem`** : Pour définir une liste quand on ne peut pas utiliser `<ul>`/`<li>`.
+
+**Les rôles de "Live Regions"**
+
+Pour les éléments dont le contenu change dynamiquement.
+
+- **`alert`** : Pour les messages d'erreur ou notifications importantes qui doivent être lus immédiatement.
+- **`status`** : Pour des mises à jour moins urgentes (ex: "Panier mis à jour").
+
+**Le "Rôle de la mort" : `presentation` ou `none`**
+
+L'attribut `role="presentation"` (ou son synonyme `role="none"`) est très puissant : il **supprime la sémantique** d'un élément.
+
+> Si tu mets `role="presentation"` sur une image, le lecteur d'écran l'ignorera totalement, même s'il y a un `alt`. On l'utilise souvent sur des tableaux utilisés uniquement pour la mise en page (ce qui est rare aujourd'hui) ou des éléments purement décoratifs.
+
 ### Labels
 
 Les labels permettent de donner une information de base concernant la nature et le type d’information attendu dans un champ.
@@ -213,7 +255,7 @@ Par exemple: si une icône est  uniquement décorative et ne contient pas de lie
 Quand on utilise ce dernier en inline, il convient de respecter certaines règles :
 
 - **Vous pouvez utiliser la balise  `title` pour décrire le SVG**. Si c’est un panier (dans le cadre d’un site e-commerce), vous pourrez écrire :  `<title>Panier</title>` .
-- En complément de la balise  `title` , vous pouvez utiliser la balise  `**desc**` qui vous permettra d’ajouter une description complémentaire. Par exemple,  `<desc>la forme d’un caddie de supermarché</desc>` .
+- En complément de la balise  `title` , vous pouvez utiliser la balise  `desc` qui vous permettra d’ajouter une description complémentaire. Par exemple,  `<desc>la forme d’un caddie de supermarché</desc>` .
 - Pour lier le SVG à vos balises  `title` et  `desc` , vous allez devoir utiliser de pair un **attribut  `id` et un  `aria-describedby`** . Vous pouvez trouver ci-dessous un exemple d'implémentation.
 - Enfin, vous pouvez aller plus loin en utilisant l’attribut `role=img` au sein du SVG. Cela permettra aux technologies d'assistance d’indiquer que cet élément est à considérer comme une image.
 
