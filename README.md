@@ -64,7 +64,7 @@ npx markmap-cli README.md --offline --output index.html
 ## Encodage
 
 * ASCII
-* [Unicode (UTF8, UTF16 et UTF32)](standards/Unicode.md)
+* [Unicode (UTF8, UTF16 et UTF32)](Standards/Unicode.md)
 
 * Base64
 
