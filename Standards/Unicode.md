@@ -9,7 +9,7 @@ Unicode est LE standard pour
 ## Quelques point de rappels
 
 * Le **point de code** est un "caractère" composé de un ou plusieurs **glyphes** ou **caractère composé**, par exemple : è, ´, A, 😀, ع,  ou 野 sont des **points de codes**. En gros pour nous occidentaux un caractère.
-* Un **glyphe** et une composante ou le "caractère", par exemple l'accent aigu: `´ + e = é` utilise 2 glyphes pour dessiner le `é`
+* Un **glyphe** est un "caractère" ou partie d'un caractère au sens visuel, par exemple l'accent aigu: `´ + e = é` utilise 2 glyphes pour dessiner le `é`
 * **Encodage** définit les différents façon d'encoder des points de codes en binaire. UTF8, UTF16 et UTF32 sont des encodages
 * **Unicode** répertorie chaque glyphe et chaque combinaison de glyphes dans un standard. (U+00E9), (U+0301) sont des points de codes
 * **NFC** est la forme **précomposé** d'un point de code (`é`) = 1 point de code. 
