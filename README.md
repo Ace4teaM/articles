@@ -97,20 +97,13 @@ npx markmap-cli README.md --offline --output index.html
 
 * [Full height en HTML_CSS avec scrolling](Web/Full_height_en_HTML_CSS_avec_scrolling.md)
 
-### Frameworks
-
-* React
-* Vue.js
-* [Next.js (React)](Web/React_Next.md)
-* ExpressJS (BackEnd)
-
 ### Librairies
 
 #### Validation de champs
 
 * JOI.js
 
-#### ORM: Object Relational Mapping
+#### ORM: Object–relational mapping
 
 * Prisma
 * Entity Framework
@@ -118,7 +111,14 @@ npx markmap-cli README.md --offline --output index.html
 ## HTTP
 
 * [Application Programming Interface (API)](Web/API.md)
-* [En-Têtes (Header)](Web/HTTP-Header.md)
+* [En-Têtes (Headers)](Web/HTTP-Header.md)
+
+## Frameworks
+
+* React
+* Vue.js
+* [Next.js (React)](Web/React_Next.md)
+* ExpressJS (BackEnd)
 
 # Systèmes
 
@@ -142,7 +142,7 @@ npx markmap-cli README.md --offline --output index.html
 
 ## MacOS
 
-# Multi-Plateforme
+# Desktop
 
 ## Framework
 
@@ -175,27 +175,124 @@ npx markmap-cli README.md --offline --output index.html
 
 # Intelligence Artificielle
 
-## Protocoles
+## Infrastructure / Orchestration IA
 
-* [Model Context Protocol (MCP)](IA/IA-MCP.md)
-
-## LLM ou Large Langage Model
-
-### Modèles
-
-* [Mistral](IA/IA-Mistral.md)
-
-### Outils
-
-* Huggingface
+- [Model Context Protocol (MCP)](IA/IA-MCP.md)
+- APIs
+- Agents IA
+- Tool calling
+- RAG
+- Vector databases
 
 ## Machine Learning
 
-### Modèles par régression
+### Régression (Prédire une Valeur)
 
-### Modèles par arbre
+#### Régression Linéaire
 
-### Modèle par réseaux neurones et Deep Learning
+##### Concept
+
+* [Prédiction par régression linéaire](IA/MachineLearning/RegressionLineaire.md)
+* Préparation des données
+
+##### Evaluation
+
+* [MSE](IA/MachineLearning/MSE.md)
+* [RMSE](IA/MachineLearning/RMSE.md)
+* [MAE](IA/MachineLearning/MAE.md)
+* [MAPE](IA/MachineLearning/MAPE.md)
+* [R²](IA/MachineLearning/R2.md)
+
+#### Régression Polynomiale
+
+##### Concept
+
+* [Prédiction par régression polynomiale](IA/MachineLearning/RegressionPolynomiale.md)
+* Préparation des données
+
+##### Evaluation
+
+* [MSE](IA/MachineLearning/MSE.md)
+* [RMSE](IA/MachineLearning/RMSE.md)
+* [MAE](IA/MachineLearning/MAE.md)
+* [MAPE](IA/MachineLearning/MAPE.md)
+* [R²](IA/MachineLearning/R2.md)
+
+#### Réseau de neurones (MLP)
+
+### Classification (Prédire une Catégorie)
+
+#### Régression Logistique
+
+##### Concept
+
+* [Prédiction par régression logistique](IA/MachineLearning/RegressionLogistique.md)
+* Préparation des données
+
+##### Evaluation
+
+* ROC
+* AUC
+
+#### Random Forest
+
+##### Concept
+
+* Prédiction par arbre aléatoire
+* Préparation des données
+
+##### Evaluation
+
+* ROC
+* AUC
+
+#### Arbres de décision
+
+#### SVM
+
+#### Deep Learning
+
+### Vision (Analyser une image)
+
+#### Transformateur de vision (ViT)
+
+#### Réseaux de neurones convolutifs (CNN)
+
+### Non-Supervisé (Découvrir, Regrouper, Réduire)
+
+#### Partitionnement (K-Means)
+
+##### Concept
+
+* [Regroupement par partitionnement](IA/MachineLearning/KMean.md)
+
+#### Analyse en composantes principales (PCA)
+
+#### Auto-Encodeurs (Autoencoders)
+
+### Génératif (Créer des données)
+
+#### Réseau génératif (GAN)
+
+#### Modèles de diffusion (Diffusion Models)
+
+### Texte / Langage (Séquences)
+
+#### RNN / LSTM / GRU
+
+#### Large Langage Model (Transformer)
+
+##### Modèles
+
+* [Mistral](IA/IA-Mistral.md)
+
+##### Outils
+
+* Huggingface
+
+##### Protocoles
+
+* [Model Context Protocol (MCP)](IA/IA-MCP.md)
 
 # Mathématiques
 
