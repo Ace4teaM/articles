@@ -22,11 +22,31 @@ npx markmap-cli README.md --offline --output index.html
 
 * [Problème de compilation MAXSDK sous VisualStudio](3DSMax/Probleme_de_compilation_MAXSDK_sous_VisualStudio.md)
 
-# Conception
+# Conception Logiciel
 
 ## Méthodes
 
 * [Langage de Modélisation Unifié (UML)](Conception/UML.md)
+
+## Patrons
+
+### Architecture
+
+* [MVC: Model - View - Controler](Conception/MVC.md)
+* [MVVM: Model - View - ViewModel](Conception/MVVM.md)
+
+* [MVP: Model-View-Presenter](Conception/MVP.md)
+* [Clean Architecture](Conception/Clean.md)
+* [Hexagonal Architecture](Conception/Hexagonal.md)
+* [CQRS: Command Query Responsibility Segregation](Conception/CQRS.md)
+
+### Motifs
+
+* Strategy
+* Observer
+* Factory
+* Command
+* State
 
 # Programmation
 
@@ -188,29 +208,14 @@ npx markmap-cli README.md --offline --output index.html
 
 ### Régression (Prédire une Valeur)
 
-#### Régression Linéaire
-
-##### Concept
+#### Techniques
 
 * [Prédiction par régression linéaire](IA/MachineLearning/RegressionLineaire.md)
-* Préparation des données
-
-##### Evaluation
-
-* [MSE](IA/MachineLearning/MSE.md)
-* [RMSE](IA/MachineLearning/RMSE.md)
-* [MAE](IA/MachineLearning/MAE.md)
-* [MAPE](IA/MachineLearning/MAPE.md)
-* [R²](IA/MachineLearning/R2.md)
-
-#### Régression Polynomiale
-
-##### Concept
-
 * [Prédiction par régression polynomiale](IA/MachineLearning/RegressionPolynomiale.md)
+* Réseau de neurones (MLP)
 * Préparation des données
 
-##### Evaluation
+#### Evaluation
 
 * [MSE](IA/MachineLearning/MSE.md)
 * [RMSE](IA/MachineLearning/RMSE.md)
@@ -218,39 +223,35 @@ npx markmap-cli README.md --offline --output index.html
 * [MAPE](IA/MachineLearning/MAPE.md)
 * [R²](IA/MachineLearning/R2.md)
 
-#### Réseau de neurones (MLP)
+#### Analyse
+
+* [Underfit / Overfit](IA/MachineLearning/underfit-overfit.md)
+* [Data Leakage](IA/MachineLearning/data-leakage.md)
 
 ### Classification (Prédire une Catégorie)
 
-#### Régression Logistique
-
-##### Concept
+#### Techniques
 
 * [Prédiction par régression logistique](IA/MachineLearning/RegressionLogistique.md)
+* [Prédiction par arbre de décision](IA/MachineLearning/DecisionTreeClassifier.md)
+* Prédiction par arbre aléatoire (Random Forest)
+* Prédiction par SVM
+* Prédiction par Deep Learning
 * Préparation des données
 
-##### Evaluation
+#### Evaluation
 
-* ROC
-* AUC
+* [ROC](IA/MachineLearning/ROC.md)
+* [AUC](IA/MachineLearning/AUC.md)
 
-#### Random Forest
+#### Analyse
 
-##### Concept
+* [Underfit / Overfit](IA/MachineLearning/underfit-overfit.md)
+* [Data Leakage](IA/MachineLearning/data-leakage.md)
+* [Counterfactuals](IA/MachineLearning/Counterfactuals.md)
+* [Précision / Rappel.md](precision-rappel.md)
 
-* Prédiction par arbre aléatoire
-* Préparation des données
-
-##### Evaluation
-
-* ROC
-* AUC
-
-#### Arbres de décision
-
-#### SVM
-
-#### Deep Learning
+#### 
 
 ### Vision (Analyser une image)
 
@@ -262,7 +263,7 @@ npx markmap-cli README.md --offline --output index.html
 
 #### Partitionnement (K-Means)
 
-##### Concept
+##### Techniques
 
 * [Regroupement par partitionnement](IA/MachineLearning/KMean.md)
 
