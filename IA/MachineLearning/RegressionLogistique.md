@@ -37,64 +37,169 @@ On peut donc appliquer une régression linéaire, projeter le résultat dans l'i
 
 > Cette fonction de projection de toute valeur réelle dans l'intervalle  [0,1] existe et elle s'appelle la [**fonction** **logistique**](https://fr.wikipedia.org/wiki/Fonction_logistique_(Verhulst)).
 
-# Limitations
+# Classification Binaire
 
-**Attention**: Une régression linéaire ne fonctionne que si les prédicteurs sont eux-mêmes linéaires, sinon la méthodes n'est pas adapté et il faudra opter pour un autre algorithme.
+Le modèle doit choisir entre **2 catégories**.
 
-Supposons que nous ayons une relation quadratique entre la variable cible et un prédicteur *y*=*a*∗*x*2 + du bruit comme sur le graphe ci-dessous. On voit bien que la droite  de la régression linéaire n'explique en rien la relation entre le  prédicteur et la cible.
+Exemples :
 
-![16977174396552_image29.png](16977174396552_image29.png)
+- Spam / Non spam
+- Oui / Non
+- Malade / Sain
 
-# Fiabilité
+```python
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score, classification_report
 
-## Vérifier la linéarité
+# Dataset
+data = pd.DataFrame({
+    "nb_liens": [10, 0, 5, 1, 8, 0, 7, 2],
+    "nb_mots": [100, 20, 80, 15, 120, 10, 90, 25],
+    "spam": [1, 0, 1, 0, 1, 0, 1, 0]
+})
 
-Comparons nos candidats dans des nuages de points
+# Variables explicatives
+X = data[["nb_liens", "nb_mots"]]
 
-![2026-05-11 111939.png](2026-05-11 111939.png)
+# Variable cible
+y = data["spam"]
 
-**Si:**
+# Découpage train/test
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.3, random_state=42
+)
 
-- une droite → bon candidat
-- une courbe → relation non linéaire (transformations possibles)
-- un nuage sans structure → peu utile
+# Modèle
+model = LogisticRegression()
 
-### Corrélation de Pearson
+# Entraînement
+model.fit(X_train, y_train)
 
-Elle mesure la force d’une relation linéaire :
+# Prédictions
+y_pred = model.predict(X_test)
 
-- proche de **+1 / -1** → bon signal
-- proche de **0** → faible intérêt linéaire
-
-En Python :
-
+# Résultats
+print("Accuracy :", accuracy_score(y_test, y_pred))
+print(classification_report(y_test, y_pred))
 ```
-df.corr(numeric_only=True)
+
+# Classification Multiclasse
+
+Le modèle doit choisir **UNE classe parmi plusieurs**.
+
+Exemples :
+
+- Chat / Chien / Oiseau
+- Rouge / Bleu / Vert
+- Type de fleur Iris
+
+```python
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import classification_report
+
+# Chargement dataset
+iris = load_iris()
+
+X = iris.data
+y = iris.target
+
+# Split
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.3, random_state=42
+)
+
+# Modèle
+model = LogisticRegression(max_iter=200)
+
+# Entraînement
+model.fit(X_train, y_train)
+
+# Prédictions
+y_pred = model.predict(X_test)
+
+# Résultats
+print(classification_report(y_test, y_pred))
 ```
 
-Ou avec une variable :
 
+
+## Fonctionnement
+
+La régression logistique calcule une probabilité pour chaque classe :
+
+- P(setosa)
+- P(versicolor)
+- P(virginica)
+
+Puis choisit la plus grande.
+
+# Classification Multilabel
+
+Ici une donnée peut appartenir à **PLUSIEURS classes simultanément**.
+
+Exemples :
+
+- Film → Action + Science-fiction
+- Image → Chien + Herbe + Voiture
+- Musique → Rock + Électro
+
+Contrairement au multiclasse :
+
+- multiclasse = UNE seule catégorie
+- multilabel = plusieurs catégories possibles
+
+```python
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.multiclass import OneVsRestClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import classification_report
+
+# Dataset
+data = pd.DataFrame({
+    "duree": [90, 120, 150, 95, 140, 110],
+    "explosions": [0, 1, 1, 0, 1, 0],
+    "humour": [1, 0, 0, 1, 0, 1],
+
+    # Labels multiples
+    "Action": [0, 1, 1, 0, 1, 0],
+    "Comedie": [1, 0, 0, 1, 0, 1],
+    "ScienceFiction": [0, 1, 1, 0, 1, 0]
+})
+
+X = data[["duree", "explosions", "humour"]]
+
+y = data[["Action", "Comedie", "ScienceFiction"]]
+
+# Split
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.3, random_state=42
+)
+
+# Modèle multilabel
+model = OneVsRestClassifier(LogisticRegression())
+
+# Entraînement
+model.fit(X_train, y_train)
+
+# Prédictions
+y_pred = model.predict(X_test)
+
+print(classification_report(y_test, y_pred))
 ```
-from scipy.stats import pearsonr
-pearsonr(X, y)
-```
 
-⚠️ Attention : corrélation ≠ causalité.
+## Pourquoi `OneVsRestClassifier` ?
 
-## Rapporter tous les prédicteurs à une même plage
+Parce qu’on entraîne :
 
-**Des variations d'amplitude significative peuvent fausser l'importance des coefficients**
+- un modèle pour Action
+- un modèle pour Comédie
+- un modèle pour Science-fiction
 
-Une autre précaution utile concerne l'amplitude respective des variables.
+Chaque modèle répond indépendamment :
 
-Les valeurs des coefficients de la régression linéaire sont en effet  inversement proportionnelles à l'amplitude de la variable associée.
-
-Si une variable est 1 000 fois plus grande en moyenne qu'une autre  variable, et si ces 2 variables ont le même pouvoir de prédiction sur la variable cible, alors le coefficient de la grande variable sera  1 000 fois plus petit que celui de la deuxième variable.
-
-En normalisant les variables afin que leur amplitude soit comprise dans un intervalle comparable, chaque coefficient de la régression linéaire  reflète directement l'impact de la variable sur la variable cible, son  pouvoir de prédiction.
-
-![c52ab863-4ad4-4661-b184-7eda7eccdad7.png](c52ab863-4ad4-4661-b184-7eda7eccdad7.png)
-
-**Application avec python**
-
-![267ace3d-2d02-4d00-b7ec-d7b076a034d4.png](267ace3d-2d02-4d00-b7ec-d7b076a034d4.png)
+- oui/non
