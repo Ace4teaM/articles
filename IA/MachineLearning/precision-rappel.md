@@ -22,6 +22,14 @@ La courbe représente le compromis entre **précision et rappel** en fonction du
 
 
 
+# Rappels
+
+**Précision** = Parmi les éléments prédits positifs, combien sont corrects ?
+
+**Rappel** = Parmi les vrais positifs, combien ont été détectés ?
+
+# Exemple
+
 Voici un exemple de courbe:
 
 ![](precision-rappel.png)

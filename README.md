@@ -208,12 +208,18 @@ npx markmap-cli README.md --offline --output index.html
 
 ### Régression (Prédire une Valeur)
 
-#### Techniques
+#### Préparation
+
+* [Préparation des données](IA/MachineLearning/Preparation.md)
+
+#### Prédiction
 
 * [Prédiction par régression linéaire](IA/MachineLearning/RegressionLineaire.md)
 * [Prédiction par régression polynomiale](IA/MachineLearning/RegressionPolynomiale.md)
-* Réseau de neurones (MLP)
-* Préparation des données
+* [Prédiction par forêt aléatoire (Random Forest)](IA/MachineLearning/RandomForest.md)
+* [Prédiction avec XGBoost](IA/MachineLearning/XGboost.md)
+* [Prédiction par SVR (SVM)](IA/MachineLearning/SVR.md)
+* [Prédiction par Réseau de neurones (MLP)](IA/MachineLearning/MLP-R.md)
 
 #### Evaluation
 
@@ -227,17 +233,30 @@ npx markmap-cli README.md --offline --output index.html
 
 * [Underfit / Overfit](IA/MachineLearning/underfit-overfit.md)
 * [Data Leakage](IA/MachineLearning/data-leakage.md)
+* [Counterfactuals](IA/MachineLearning/Counterfactuals.md)
+* [Précision / Rappel](IA/MachineLearning/precision-rappel.md)
+* [Rules-Based et Dummy modèles](IA/MachineLearning/rule-based_dummy.md)
+
+#### Outils
+
+* [BentoML](IA/MachineLearning/BentoML.md)
+* Evidently
+* MLflow Tracking
 
 ### Classification (Prédire une Catégorie)
 
-#### Techniques
+#### Préparation
+
+* [Préparation des données](IA/MachineLearning/Preparation.md)
+
+#### Prédictions
 
 * [Prédiction par régression logistique](IA/MachineLearning/RegressionLogistique.md)
 * [Prédiction par arbre de décision](IA/MachineLearning/DecisionTreeClassifier.md)
-* Prédiction par arbre aléatoire (Random Forest)
-* Prédiction par SVM
-* Prédiction par Deep Learning
-* Préparation des données
+* [Prédiction par forêt aléatoire (Random Forest)](IA/MachineLearning/RandomForest.md)
+* [Prédiction avec XGBoost](IA/MachineLearning/XGboost.md)
+* [Prédiction par SVC (SVM)](IA/MachineLearning/SVC.md)
+* [Prédiction par Réseau de neurones (MLP)](IA/MachineLearning/MLP-C.md)
 
 #### Evaluation
 
@@ -249,9 +268,15 @@ npx markmap-cli README.md --offline --output index.html
 * [Underfit / Overfit](IA/MachineLearning/underfit-overfit.md)
 * [Data Leakage](IA/MachineLearning/data-leakage.md)
 * [Counterfactuals](IA/MachineLearning/Counterfactuals.md)
-* [Précision / Rappel.md](precision-rappel.md)
+* [Précision / Rappel](IA/MachineLearning/precision-rappel.md)
+* [Matrice de confusion](IA/MachineLearning/MatriceConfusion.md)
+* [Rules-Based et Dummy modèles](IA/MachineLearning/rule-based_dummy.md)
 
-#### 
+#### Outils
+
+* [BentoML](IA/MachineLearning/BentoML.md)
+* Evidently
+* MLflow Tracking
 
 ### Vision (Analyser une image)
 
@@ -261,11 +286,9 @@ npx markmap-cli README.md --offline --output index.html
 
 ### Non-Supervisé (Découvrir, Regrouper, Réduire)
 
-#### Partitionnement (K-Means)
+#### Techniques
 
-##### Techniques
-
-* [Regroupement par partitionnement](IA/MachineLearning/KMean.md)
+* [Regroupement par partitionnement (K-Means)](IA/MachineLearning/KMean.md)
 
 #### Analyse en composantes principales (PCA)
 
