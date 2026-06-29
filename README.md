@@ -144,9 +144,15 @@ npx markmap-cli README.md --offline --output index.html
 
 ## Windows
 
+### Procédures
+
 * [Changer la clé de produit de Windows XP sans réinstaller](Windows/Changer_la_cle_de_produit_Windows_XP_sans_reinstaller.md)
 * [Déterminer la véritable taille d'un dossier](Windows/Determiner_la_veritable_taille_d_un_dossier.md)
 * [Interdire l'utilisation d'une clé USB](Windows/Interdire_utilisation_une_cle_USB.md)
+
+### Outils
+
+* [TreeSize Free](https://www.jam-software.com/treesize)
 
 ## Linux
 
@@ -262,6 +268,7 @@ npx markmap-cli README.md --offline --output index.html
 
 * [ROC](IA/MachineLearning/ROC.md)
 * [AUC](IA/MachineLearning/AUC.md)
+* [F1-score](IA/MachineLearning/F1.md)
 
 #### Analyse
 
