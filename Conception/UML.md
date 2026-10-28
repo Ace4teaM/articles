@@ -6,7 +6,7 @@
 
 **Types de données**
 
-![types de données](types de données.png)
+![types de données](types-de-données.png)
 
 ### Classe abstraites
 
@@ -14,7 +14,7 @@ Placer le nom de la classe en Italic permet de définir cette classe comme non i
 
 Ici `Oeuvre` et `Serie`  sont des classes abstraites, `Telefilm`, `LongMetrage`, `SerieWeb` et `SerieTV` sont des classes dérivées 
 
-![](UML - classe abstraite.png)
+![](UML-classe-abstraite.png)
 
 #### L’agrégation
 
@@ -22,7 +22,7 @@ Ici `Oeuvre` et `Serie`  sont des classes abstraites, `Telefilm`, `LongMetrage`,
 
 Elle se représente comme ceci, avec un losange blanc (vide) :
 
-[![La classe 'classe' à gauche. Un losange vide, qui relie la classe 'Eleve'](UML - agrégation.png)](https://user.oc-static.com/upload/2021/10/16/16343615248181_image13.png)Modélisation de l’agrégation
+[![La classe 'classe' à gauche. Un losange vide, qui relie la classe 'Eleve'](UML-agrégation.png)](https://user.oc-static.com/upload/2021/10/16/16343615248181_image13.png)Modélisation de l’agrégation
 
 Contrairement à la composition, il n’y a pas de contrainte sur les multiplicités, ni  sur le cycle de vie des objets agrégés (ils peuvent exister même lorsque l’objet agrégeant disparaît).
 
@@ -30,11 +30,15 @@ Contrairement à la composition, il n’y a pas de contrainte sur les multiplici
 
 Il est possible de créer des associations entre plus que 2 classes. Ce  sont les associations N-aires. Voici un exemple d’association ternaire :
 
-[![Modélisation d’une association ternaire](UML - association ternaire.png)](https://user.oc-static.com/upload/2021/10/16/16343616940205_image75.png)Modélisation d’une association ternaire
+![Modélisation d’une association ternaire](UML-association-ternaire.png)
+
+Modélisation d’une association ternaire
 
 En pratique, on n’utilise jamais d’association de degré supérieur à trois. De plus, les associations ternaires peuvent toujours être transformées  en trois associations binaires, en transformant l’association en une  nouvelle classe, comme ceci :
 
-[![Création d’une classe  Cours  pour éviter une association ternaire](UML - association ternaire 2.png)](https://user.oc-static.com/upload/2021/10/16/16343618266306_image16.png)Création d’une classe Cours pour éviter une association ternaire
+![Création d’une classe  Cours  pour éviter une association ternaire](UML-association-ternaire-2.png)
+
+Création d’une classe Cours pour éviter une association ternaire
 
 Il est conseillé **de ne pas abuser** des associations ternaires, car elles sont souvent moins intelligibles.
 
@@ -44,7 +48,7 @@ Il est possible d’ajouter des notes au diagramme de classes. Elles servent à 
 
 Sur votre diagramme, vous auriez pu poser la contrainte que l’attribut`dateDeDebut`doit être une date antérieure à`dateDeFin`. Eh oui, cela paraît logique, mais il faudra le spécifier à votre SGBDR car il ne le fera pas automatiquement !
 
-[![Représentation d’une note à la classe Tournage](UML - notes.png)](https://user.oc-static.com/upload/2021/10/16/16343619959232_image23.png)Représentation d’une note à la classe Tournage
+[![Représentation d’une note à la classe Tournage](UML-notes.png)](https://user.oc-static.com/upload/2021/10/16/16343619959232_image23.png)Représentation d’une note à la classe Tournage
 
 Les notes servent aussi à préciser les domaines des attributs quand ceux-ci sont plus complexes que`Entier`,`Date`,`Texte`, etc.
 
@@ -56,7 +60,7 @@ Deux classes peuvent être liées entre elles via deux (ou plus) associations.
 
 Ce serait le cas lorsqu’une personne écrit un livre, et lorsqu’une autre personne traduit ce livre dans une autre langue :
 
-[![Modélisation avec deux associations, représentée par les deux traits nommés respectivement](UML - doubles associations.png)](https://user.oc-static.com/upload/2021/10/16/16343621963265_image69.png)Modélisation avec deux associations, représentée par les deux traits nommés respectivement "écrire" et "traduire"
+[![Modélisation avec deux associations, représentée par les deux traits nommés respectivement](UML-doubles-associations.png)](https://user.oc-static.com/upload/2021/10/16/16343621963265_image69.png)Modélisation avec deux associations, représentée par les deux traits nommés respectivement "écrire" et "traduire"
 
 Dans ce cas, il est nécessaire de donner un nom aux associations pour les différencier.
 
@@ -64,7 +68,7 @@ Dans ce cas, il est nécessaire de donner un nom aux associations pour les diff�
 
 Plutôt que de donner un nom aux associations, vous pouvez aussi caractériser  une association par le rôle que tient chacune des deux classes. C’est le cas dans cet exemple, où on peut remplacer le nom de l’association  « conduit » par « conducteur » et « moyen de locomotion » :
 
-[![On voit que Personne à pour rôle de Conducteur par rapport à Vehicule. Et Vehicule a le rôle de moyenLomotion par rapport à Personne.](UML - rôles de classes.png)](https://user.oc-static.com/upload/2021/10/16/16343623263452_image1.png)Modélisation avec le rôle des classes spécifié
+[![On voit que Personne à pour rôle de Conducteur par rapport à Vehicule. Et Vehicule a le rôle de moyenLomotion par rapport à Personne.](UML-rôles-de-classes.png)](https://user.oc-static.com/upload/2021/10/16/16343623263452_image1.png)Modélisation avec le rôle des classes spécifié
 
 C’est à vous de choisir si vous trouvez cette manière plus simple à  comprendre. Si vous indiquez les rôles, pas besoin d’utiliser de verbes.
 
@@ -74,7 +78,7 @@ Une classe peut être associée à elle-même !
 
 Par exemple, une classe`Categorie`peut avoir des sous-catégories et des catégories parentes :
 
-[![Représentation des sous-catégories](UML - association réflexive.png)](https://user.oc-static.com/upload/2021/10/16/16343626014211_image66.png)Représentation des sous-catégories
+[![Représentation des sous-catégories](UML-association-réflexive.png)](https://user.oc-static.com/upload/2021/10/16/16343626014211_image66.png)Représentation des sous-catégories
 
 # UML - Outils
 
