@@ -27,6 +27,7 @@ npx markmap-cli README.md --offline --output index.html
 ## Méthodes
 
 * [Langage de Modélisation Unifié (UML)](Conception/UML.md)
+* [Apporter une solution à un problème métier](Methodes/Apporter_une_solution_a_un_probleme_metier.md)
 
 ## Patrons
 
@@ -206,9 +207,20 @@ npx markmap-cli README.md --offline --output index.html
 - [Model Context Protocol (MCP)](IA/IA-MCP.md)
 - APIs
 - Agents IA
+  - [Déployer un agent localement](IA/AgentsIA/LocalAgent.md)
 - Tool calling
-- RAG
+- RAG Framework
+  - [LlamaIndex](IA/LlamaIndex.md)
+  - [LangChain](https://www.langchain.com/)
 - Vector databases
+  - Comment choisir son système de vectorisation ? 
+  - **[Faiss](https://github.com/facebookresearch/faiss)** : Optimisé pour les recherches rapides.
+  - **[Pinecone](https://www.pinecone.io)** : Solution managée facile à déployer.
+  - **[Weaviate](https://weaviate.io/)** : Intégration avec des graphes de connaissances.
+  - **[Milvus](https://milvus.io/)** : Conçu pour des écosystèmes d’IA à grande échelle.
+- Documents pre-processing
+  - [Docling](https://github.com/docling-project/docling)
+- Alignement des espaces de représentation (vectorisation)
 
 ## Machine Learning
 
@@ -285,11 +297,27 @@ npx markmap-cli README.md --offline --output index.html
 * Evidently
 * MLflow Tracking
 
+### Son (Analyser des sons)
+
+#### Reconnaissance de la parole (ASR)
+
+##### Librairies
+
+* [Whisper](https://github.com/openai/whisper)
+
 ### Vision (Analyser une image)
 
 #### Transformateur de vision (ViT)
 
 #### Réseaux de neurones convolutifs (CNN)
+
+#### Reconnaissance de textes (**OCR**)
+
+##### Librairies
+
+* [EasyOCR (Python)](https://github.com/jaidedai/easyocr)
+* [Tesseract OCR](https://github.com/tesseract-ocr/tesseract)
+* [GOT-OCR](https://github.com/Ucas-HaoranWei/GOT-OCR2.0)
 
 ### Non-Supervisé (Découvrir, Regrouper, Réduire)
 
